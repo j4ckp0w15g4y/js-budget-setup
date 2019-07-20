@@ -20,16 +20,22 @@ class UI {
   submitBudgetForm() {
     const value = this.budgetInput.value;
     if (value === '' || value < 0) {
-        this.budgetFeedback.classList.add("showItem")
-        this.budgetFeedback.innerHTML = `<p> value cannot be empty or negative </p>`;
-        const self = this;
-        console.log(this);
-        setTimeout(function() {
-          console.log(this);
-            console.log(self);
-          this.budgetFeedback.classList.remove("showItem");                    
-        }, 4000);
+      this.budgetFeedback.classList.add("showItem")
+      this.budgetFeedback.innerHTML = `<p> value cannot be empty or negative </p>`;
+      const self = this;
+      // console.log(this);
+      setTimeout(function () {
+        self.budgetFeedback.classList.remove("showItem");
+      }, 4000);
+    } else {
+      this.budgetAmount.textContent = value;
+      this.budgetInput.value = '';
+      this.showBalance();
     }
+  }
+
+  showBalance(){
+    console.log(`hey i'm getting a hold of 'this' keyword`)
   }
 }
 
