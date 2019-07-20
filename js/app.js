@@ -11,8 +11,19 @@ class UI {
     this.expenseForm = document.getElementById("expense-form");
     this.expenseInput = document.getElementById("expense-input");
     this.amountInput = document.getElementById("amount-input");
-    this.expenseList = document.getElementById("expense-list");
+    this.expenseList = document.getElementById("expense-list"); 
     this.itemList = [];
     this.itemID = 0;
   }
+
 }
+
+function eventListeners() {
+  const budgetForm = document.getElementById('budget-form')
+  const expenseForm = document.getElementById('expense-form')
+  const expenseForm = document.getElementById('expense-form')
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  eventListeners();
+})
