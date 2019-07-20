@@ -42,6 +42,22 @@ class UI {
     if (total < 0) {
       this.balance.classList.remove('showGreen', 'showBlack')
       this.balance.classList.add('showRed')
+    } else if (total > 0) {
+      this.balance.classList.remove('showRed', 'showBlack')
+      this.balance.classList.add('showGreen')
+    } else if (total === 0) {
+      this.balance.classList.remove('showRed', 'showGreen')
+      this.balance.classList.add('showBlack')
+    } 
+  }
+
+  // submit  expense form 
+  submitExpenseForm() {
+    const expenseValue = this.expenseInput.value;
+    const amountValue = this.amountInput.value;
+
+    if(expenseValue === '' || amountValue === '' || amountValue < 0) {
+
     }
   }
 
@@ -69,6 +85,7 @@ function eventListeners() {
   //expense form submit
   expenseForm.addEventListener('submit', function (e) {
     event.preventDefault();
+    ui.submitExpenseForm();
   })
 
 
